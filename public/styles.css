@@ -1,0 +1,169 @@
+.hero-container {
+  background: url("images/hero.png");
+  height: 450px;
+  width: 1200px;
+  margin: 0 auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color:#D6EFD8;  
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color:#D6EFD8;
+    font-family: tahoma;
+    width: 1200px;
+    padding: 30px ;
+    box-sizing: border-box;
+    text-align: justify;
+    align-self: center;
+    margin-bottom: 20px;
+    
+}
+.container .comment {
+    font-size: 14px;
+    
+
+}
+
+    
+header {
+    margin:0;
+    padding:0;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.nav-container>div{
+    width: 1200px;
+    justify-content: space-around;
+    font-family: tahoma;
+    font-size: 1.25rem;
+    background-color: #80AF81;
+    transition: .3s;
+}
+.nav-list {
+    list-style: none;
+    text-align: center;
+    border: solid .5px white;
+    padding: 5px;
+}
+
+.nav-list:hover {
+    background-color:#508D4E ;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color:#508D4E;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.h1-container {
+  width: 325px;
+  position: relative;
+  top: 15%;
+  left: 45%;
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+    font-size: 3rem;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    padding: 20px 0;
+    height:400px;
+    width: 500px;
+    align-self: center;
+    
+}
+
+fieldset {
+    border: none;
+    padding: 15px 0;
+}
+.hr-comment{
+    margin: 0;
+
+}
+.comment-list {
+    padding-left: 0;
+    list-style: none;
+}
+.comment-list form {
+    width: 20%;
+    display: inline;
+}
+.list-content {
+    background-color: white;
+}
+.list-msg {
+    border-bottom: solid 1px black;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+.list-user {
+    color: #1A5319;
+    font-weight: bold;
+}
+.list-time{
+    font-style: italic;
+    font-size: smaller;
+}
+
+.editing, .footer  {
+    
+    align-items: center;
+}
+
+.footer {
+    
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+body > footer > div > div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    height: 100px;
+    
+}
+
+body > footer > div > div:nth-child(2) {
+    border-top: solid 1px #1A5319;
+    width: 100%;
+    color: #1A5319;
+    font-size: smaller;
+}
+.editing-input {
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+
+[value="update"] {
+    width: 200px;
+    box-sizing: border-box;
+}
