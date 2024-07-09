@@ -324,10 +324,10 @@
               <p class="list-msg"><%= comment.message %></p>
               <p class="list-time">• <%=  comment.time%></p>
                 </div>
-              <form action="/edit/<%= comment.commentID %>" method="POST">
+              <form action="/edit?id=<%= comment.commentID %>" method="POST">
                 <input type="submit" name="submit" value="Edit" />                
               </form>
-              <form action="/delete/<%= comment.commentID %>" method="POST">
+              <form action="/delete?id=<%= comment.commentID %>" method="POST">
                 <input type="submit" name="submit" value="Delete" />
               </form>
               </li>

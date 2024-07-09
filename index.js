@@ -24,27 +24,28 @@ app.get("/", (req, res) => {
 });
 
 
-app.post("/update/:id", (req, res) => {
-  //get the object index from parameter id of edit button
-  const commentId = req.params.id;
-  console.log(commentId);
+app.post("/update", (req, res) => {
+  //get the object index from queryeter id of edit button
+  const commentId = req.query.id;
+  // console.log(commentId);
+  
   const updatedComment = req.body.message;
   comment[commentId-1].message = updatedComment;
   res.render("index.ejs", { comments: comment, isLast: isLastComment});
 });
 
-app.post("/edit/:id", (req, res) => {
-  //get the object index by passing the param to url
-  const param_id = req.params.id;
-  console.log(param_id);
-  res.render("edit-comment.ejs", { id: param_id });
+app.post("/edit", (req, res) => {
+  //get the object index by passing the query to url
+  const query_id = req.query.id;
+  // console.log(query_id);
+  res.render("edit-comment.ejs", { id: query_id });
 });
 
-app.post("/delete/:id", (req, res) => {
+app.post("/delete", (req, res) => {
   //deletes a comment and decrements currentIndex not yet finished
-  const param_id = parseInt(req.params.id);
+  const query_id = parseInt(req.query.id);
   const targetIndex = comment.findIndex(
-    (comment) => comment.commentID === param_id
+    (comment) => comment.commentID === query_id
   );
   if (targetIndex !== -1) {
     comment.splice(targetIndex, 1);
@@ -53,7 +54,7 @@ app.post("/delete/:id", (req, res) => {
     } else {
       isLastComment=false;
     }
-    console.log("del:" + param_id);
+    // console.log("del:" + query_id);
     res.render("index.ejs", { comments: comment, isLast: isLastComment });
   }
 
@@ -72,7 +73,7 @@ app.post("/submit", (req, res) => {
     comments: comment,
     isLast: isLastComment
   });
-  console.log(comment);
+  // console.log(comment);
 });
 
 app.listen(port, () => {

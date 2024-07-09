@@ -1,5 +1,5 @@
 <%- include("partials/header.ejs") %>
-<form action="/update/<%= id %>" method="POST" class="container editing">
+<form action="/update?id=<%= id %>" method="POST" class="container editing">
     <textarea name="message" id="message" cols="60" rows="5" class="editing-input" placeholder="type your message" required></textarea>
     <input type="submit" name="submit" value="update">
 </form>
